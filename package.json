@@ -1,0 +1,9 @@
+{
+  "name": "Anuj Panwar",
+  "dependencies": {
+    "typescript": "^5.1.6"
+  },
+  "scripts": {
+    "start": "npx tsc ./with-typescript.js"
+  }
+}
