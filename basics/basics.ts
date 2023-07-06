@@ -61,8 +61,8 @@ const voidReturn = (a: any, b: any) => {
 
 //---------------------------------- Generics --------------------------------//
 
-// generics always look the first argument
-// if argument is number then we can only pass number array
+// generics always look the first parameter
+// if parameter is number then we can only pass number array
 function returnNewArray<A>(valueToAdd: A, array: A[]) {
   const newArray = [valueToAdd, ...array];
   return newArray;
@@ -72,4 +72,20 @@ const stringARR: string[] = ["a", "b", "c", "d", "e"];
 returnNewArray("c", stringARR);
 
 const numberARR: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-returnNewArray(3, stringARR); // got error because first argument is 
+returnNewArray(3, numberARR); // got error because first argument is number and second argument is string
+
+class Test {
+  id: string;
+  name: string;
+  age: number;
+  constructor(name: string, age: number) {
+    this.id = (Math.random() * 9999).toString();
+    this.name = name;
+    this.age = age;
+  }
+}
+
+const todoFun = (myDetail: Test[]) => {
+  return myDetail;
+};
+todoFun([{ id: "wer", name: "anuj", age: 23 }]);
