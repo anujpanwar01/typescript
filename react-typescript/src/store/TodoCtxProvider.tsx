@@ -28,5 +28,5 @@ const TodoCtxProvider: React.FC<TodoDefaultProps> = (props) => {
 export default TodoCtxProvider;
 
 type TodoDefaultProps = {
-  children: ReactNode;
+  children?: ReactNode;
 };
