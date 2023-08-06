@@ -28,3 +28,9 @@ const login = (
 ) => {};
 
 login(undefined, undefined);
+
+/**
+ * TODO: Always write the return type of function it will be useful for the team
+ **/
+const handleErrors = (msg: string): void => {};
+export {};
